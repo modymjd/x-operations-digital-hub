@@ -12,7 +12,7 @@ const Achievements = () => {
     {
       id: 1,
       title: 'BASEF',
-      description: 'Bronze Medalists '24 & Finalists '25',
+      description: "Bronze Medalists '24 & Finalists '25",
       subtitle: 'ISEF-sponsored',
       icon: <Award className="w-10 h-10 text-xorange" />,
       badge: 'Bronze'
@@ -27,7 +27,7 @@ const Achievements = () => {
     {
       id: 3,
       title: 'Afro-Asian Forum',
-      description: 'Silver Medalists '24',
+      description: "Silver Medalists '24",
       flags: ['🇯🇴'],
       icon: <Award className="w-10 h-10 text-xorange" />,
       badge: 'Silver'
@@ -35,26 +35,26 @@ const Achievements = () => {
     {
       id: 4,
       title: 'NCCSI',
-      description: 'Top 10 National Level Winners '24',
+      description: "Top 10 National Level Winners '24",
       icon: <Trophy className="w-10 h-10 text-xorange" />
     },
     {
       id: 5,
       title: 'ECPC',
-      description: 'Top 30 Finalists '24',
+      description: "Top 30 Finalists '24",
       icon: <Trophy className="w-10 h-10 text-xorange" />
     },
     {
       id: 6,
       title: 'Mini Shark Tank Egypt',
-      description: 'Top 7 Finalists '25',
+      description: "Top 7 Finalists '25",
       subtitle: 'SUTech-sponsored',
       icon: <Trophy className="w-10 h-10 text-xorange" />
     },
     {
       id: 7,
       title: 'ISF',
-      description: '1st Place National Winners '25',
+      description: "1st Place National Winners '25",
       icon: <Trophy className="w-10 h-10 text-xorange" />,
       badge: 'Gold'
     }
