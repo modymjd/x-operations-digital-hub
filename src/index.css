@@ -1,3 +1,8 @@
+/* Add to the beginning of your existing index.css */
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,11 +13,17 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
 
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -20,31 +31,32 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
 
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -52,83 +64,138 @@
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
+    --ring: 217.2 32.6% 17.5%;
 
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans transition-colors duration-300;
-  }
-
-  html[dir="rtl"] body {
-    @apply font-arabic;
+    --radius: 0.5rem;
   }
 }
 
-@layer components {
-  .hero-gradient {
-    @apply bg-gradient-to-r from-xblue/90 to-xblue;
+@layer base {
+  * {
+    @apply border-border;
   }
-  
-  .btn-primary {
-    @apply bg-xorange hover:bg-xorange-light text-white px-6 py-3 rounded-md font-medium transition-colors;
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
-  
-  .btn-secondary {
-    @apply bg-xblue hover:bg-xblue-light text-white px-6 py-3 rounded-md font-medium transition-colors;
+}
+
+/* Custom CSS */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e3a8a; /* xblue */
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background-color: #1e3a8a; /* xblue */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #312e81; /* xblue-dark */
+}
+
+.btn-outline {
+  border: 2px solid #1e3a8a; /* xblue */
+  color: #1e3a8a; /* xblue */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff; /* blue-100 */
+  color: #1e3a8a; /* xblue */
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%); /* xblue to xblue-dark */
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
   }
-  
-  .btn-outline {
-    @apply border-2 border-xorange text-xorange hover:bg-xorange hover:text-white px-6 py-3 rounded-md font-medium transition-colors;
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .card {
-    @apply bg-white dark:bg-xblue-dark/30 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .glass-card {
-    @apply backdrop-blur-md bg-white/80 dark:bg-xblue-dark/60 rounded-lg shadow-lg p-6 border border-white/20 dark:border-white/10;
-  }
-  
-  .heading {
-    @apply text-xblue dark:text-white font-bold;
-  }
-  
-  .subheading {
-    @apply text-gray-600 dark:text-gray-300;
-  }
-  
-  .highlight {
-    @apply text-xorange;
-  }
-  
-  .testimonial-card {
-    @apply p-6 rounded-xl bg-white dark:bg-xblue-dark/50 shadow-md hover:shadow-lg transition-all;
-  }
-  
-  .section {
-    @apply py-16 md:py-24;
-  }
-  
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4 text-xblue dark:text-white;
-  }
-  
-  .section-subtitle {
-    @apply text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto;
+  100% {
+    opacity: 1;
   }
 }

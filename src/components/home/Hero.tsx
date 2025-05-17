@@ -6,6 +6,19 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   const { t } = useLanguage();
 
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  // Open WhatsApp
+  const openWhatsApp = () => {
+    window.open("https://wa.me/201015175618", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="hero-gradient min-h-screen flex items-center text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-xblue to-xblue-dark opacity-90"></div>
@@ -30,10 +43,15 @@ const Hero = () => {
               {t('hero.slogan')}
             </h2>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button className="btn-primary" size="lg">
+              <Button className="btn-primary" size="lg" onClick={openWhatsApp}>
                 {t('hero.cta')}
               </Button>
-              <Button className="btn-outline" size="lg" variant="outline">
+              <Button 
+                className="btn-outline" 
+                size="lg" 
+                variant="outline" 
+                onClick={() => scrollToSection('services')}
+              >
                 {t('hero.learnMore')}
               </Button>
             </div>
