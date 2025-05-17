@@ -49,6 +49,12 @@ const translations = {
     // Testimonials Section
     'testimonials.title': 'Client Testimonials',
     'testimonials.subtitle': 'What our clients say about our services',
+    'testimonials.clientSay': 'What Our Clients Say',
+    'testimonials.trustedBy': 'Trusted By',
+    'testimonials.clientLogo': 'Client Logo',
+    'testimonials.ready': 'Ready to Join Our Success Stories?',
+    'testimonials.readyDesc': 'Contact us today to discuss how we can help your business achieve its digital transformation goals.',
+    'testimonials.getStarted': 'Get Started',
     
     // Contact Section
     'contact.title': 'Contact Us',
@@ -57,9 +63,21 @@ const translations = {
     'contact.email': 'Email',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
-    'contact.address': 'Address',
-    'contact.phone': 'Phone',
+    'contact.company': 'About Us',
+    'contact.online': 'X Operations is a 100% online tech partner – proudly serving clients across Egypt and beyond.',
+    'contact.phone': 'Contact Information',
     'contact.social': 'Social Media',
+    'contact.faq': 'Frequently Asked Questions',
+    
+    // FAQ Section
+    'faq.services': 'What services do you offer?',
+    'faq.servicesAnswer': 'We offer a range of services including mobile application development, website design and development, custom system integration, database management, and on-demand smart software solutions.',
+    'faq.timeline': 'How long does it take to complete a project?',
+    'faq.timelineAnswer': 'Project timelines vary depending on the scope and complexity. Simple websites may take 2-4 weeks, while complex applications might take several months. We provide detailed timelines during the planning phase.',
+    'faq.support': 'Do you provide support after project completion?',
+    'faq.supportAnswer': 'Yes, we offer ongoing support and maintenance packages to ensure your software continues to run smoothly after launch. We can also implement updates and new features as needed.',
+    'faq.getStarted': 'How do we get started?',
+    'faq.getStartedAnswer': 'Getting started is easy! Simply contact us through our contact form, email, or phone. We\'ll schedule an initial consultation to discuss your needs and how we can help.',
     
     // Footer
     'footer.rights': 'All rights reserved',
@@ -105,6 +123,12 @@ const translations = {
     // Testimonials Section
     'testimonials.title': 'آراء العملاء',
     'testimonials.subtitle': 'ماذا يقول عملاؤنا عن خدماتنا',
+    'testimonials.clientSay': 'ماذا يقول عملاؤنا',
+    'testimonials.trustedBy': 'يثق بنا',
+    'testimonials.clientLogo': 'شعار العميل',
+    'testimonials.ready': 'هل أنت مستعد للانضمام إلى قصص نجاحنا؟',
+    'testimonials.readyDesc': 'اتصل بنا اليوم لمناقشة كيف يمكننا مساعدة عملك على تحقيق أهداف التحول الرقمي الخاصة به.',
+    'testimonials.getStarted': 'ابدأ الآن',
     
     // Contact Section
     'contact.title': 'اتصل بنا',
@@ -113,9 +137,21 @@ const translations = {
     'contact.email': 'البريد الإلكتروني',
     'contact.message': 'الرسالة',
     'contact.send': 'إرسال الرسالة',
-    'contact.address': 'العنوان',
-    'contact.phone': 'الهاتف',
-    'contact.social': 'التواصل الاجتماعي',
+    'contact.company': 'عن الشركة',
+    'contact.online': 'X Operations هي شريك تقني 100% عبر الإنترنت - تخدم العملاء بفخر في جميع أنحاء مصر وخارجها.',
+    'contact.phone': 'معلومات الاتصال',
+    'contact.social': 'وسائل التواصل الاجتماعي',
+    'contact.faq': 'الأسئلة الشائعة',
+    
+    // FAQ Section
+    'faq.services': 'ما هي الخدمات التي تقدمونها؟',
+    'faq.servicesAnswer': 'نقدم مجموعة من الخدمات تشمل تطوير تطبيقات الموبايل، تصميم وتطوير المواقع الإلكترونية، تكامل الأنظمة المخصصة، إدارة قواعد البيانات، وحلول برمجية ذكية حسب الطلب.',
+    'faq.timeline': 'كم من الوقت يستغرق إنجاز المشروع؟',
+    'faq.timelineAnswer': 'تختلف الجداول الزمنية للمشاريع اعتمادًا على النطاق والتعقيد. قد تستغرق المواقع البسيطة 2-4 أسابيع، بينما قد تستغرق التطبيقات المعقدة عدة أشهر. نقدم جداول زمنية مفصلة خلال مرحلة التخطيط.',
+    'faq.support': 'هل تقدمون الدعم بعد اكتمال المشروع؟',
+    'faq.supportAnswer': 'نعم، نقدم حزم دعم وصيانة مستمرة لضمان استمرار عمل البرمجيات الخاصة بك بسلاسة بعد الإطلاق. يمكننا أيضًا تنفيذ التحديثات والميزات الجديدة حسب الحاجة.',
+    'faq.getStarted': 'كيف نبدأ؟',
+    'faq.getStartedAnswer': 'البدء سهل! ما عليك سوى الاتصال بنا من خلال نموذج الاتصال أو البريد الإلكتروني أو الهاتف. سنحدد موعدًا للاستشارة الأولية لمناقشة احتياجاتك وكيف يمكننا المساعدة.',
     
     // Footer
     'footer.rights': 'جميع الحقوق محفوظة',

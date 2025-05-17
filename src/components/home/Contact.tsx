@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { UserRound } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -99,8 +100,8 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="flex flex-col justify-center space-y-8">
             <div className="glass-card">
-              <h3 className="text-xl font-bold mb-4 text-xblue dark:text-white">{t('contact.address')}</h3>
-              <p className="text-gray-600 dark:text-gray-300">Smart Village, Cairo-Alexandria Desert Road, Giza Governorate, Egypt</p>
+              <h3 className="text-xl font-bold mb-4 text-xblue dark:text-white">{t('contact.company')}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{t('contact.online')}</p>
             </div>
             
             <div className="glass-card">

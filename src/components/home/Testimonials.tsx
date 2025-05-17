@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { UserRound } from 'lucide-react';
 
 const Testimonials = () => {
   const { t } = useLanguage();
@@ -12,40 +13,40 @@ const Testimonials = () => {
       text: "Honestly, these guys are super professional. They delivered our mobile app fast and flawless.",
       name: "Ahmed Hassan",
       company: "TechCairo",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      initials: "AH"
+      initials: "AH",
+      gender: "male"
     },
     {
       id: 2,
       text: "Amazing service and support! Highly recommended for any startup out there.",
       name: "Heba Mahmoud",
       company: "GrowEgypt",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      initials: "HM"
+      initials: "HM",
+      gender: "female"
     },
     {
       id: 3,
       text: "They built our company website with outstanding quality. We were truly impressed!",
       name: "Omar Kamal",
       company: "NileFurniture",
-      avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-      initials: "OK"
+      initials: "OK",
+      gender: "male"
     },
     {
       id: 4,
       text: "Never thought digital transformation could change our workflow that much. X Operations made it happen!",
       name: "Amal Sharif",
       company: "MedTech Egypt",
-      avatar: "https://randomuser.me/api/portraits/women/62.jpg",
-      initials: "AS"
+      initials: "AS",
+      gender: "female"
     },
     {
       id: 5,
       text: "Very organized team. They walk with you step by step. Thank you, X Ops!",
       name: "Tarek Gomaa",
       company: "AgriSolutions",
-      avatar: "https://randomuser.me/api/portraits/men/55.jpg",
-      initials: "TG"
+      initials: "TG",
+      gender: "male"
     },
   ];
 
@@ -63,10 +64,9 @@ const Testimonials = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <Avatar className="w-16 h-16 border-2 border-xorange mr-4">
-                  <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                  <AvatarFallback className="bg-xorange text-white">
-                    {testimonial.initials}
+                <Avatar className="w-16 h-16 border-2 border-xorange mr-4 bg-gray-100 dark:bg-xblue-light/30">
+                  <AvatarFallback className="text-xblue dark:text-white">
+                    <UserRound size={32} />
                   </AvatarFallback>
                 </Avatar>
                 <div>
