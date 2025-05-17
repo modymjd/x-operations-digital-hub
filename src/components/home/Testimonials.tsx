@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Testimonials = () => {
   const { t } = useLanguage();
@@ -12,6 +13,7 @@ const Testimonials = () => {
       name: "Ahmed Hassan",
       company: "TechCairo",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      initials: "AH"
     },
     {
       id: 2,
@@ -19,6 +21,7 @@ const Testimonials = () => {
       name: "Heba Mahmoud",
       company: "GrowEgypt",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+      initials: "HM"
     },
     {
       id: 3,
@@ -26,6 +29,7 @@ const Testimonials = () => {
       name: "Omar Kamal",
       company: "NileFurniture",
       avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+      initials: "OK"
     },
     {
       id: 4,
@@ -33,6 +37,7 @@ const Testimonials = () => {
       name: "Amal Sharif",
       company: "MedTech Egypt",
       avatar: "https://randomuser.me/api/portraits/women/62.jpg",
+      initials: "AS"
     },
     {
       id: 5,
@@ -40,6 +45,7 @@ const Testimonials = () => {
       name: "Tarek Gomaa",
       company: "AgriSolutions",
       avatar: "https://randomuser.me/api/portraits/men/55.jpg",
+      initials: "TG"
     },
   ];
 
@@ -57,11 +63,12 @@ const Testimonials = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover mr-4" 
-                />
+                <Avatar className="w-16 h-16 border-2 border-xorange mr-4">
+                  <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                  <AvatarFallback className="bg-xorange text-white">
+                    {testimonial.initials}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <h4 className="font-bold text-xblue dark:text-white">{testimonial.name}</h4>
                   <p className="text-gray-500 dark:text-gray-400 text-sm">{testimonial.company}</p>
